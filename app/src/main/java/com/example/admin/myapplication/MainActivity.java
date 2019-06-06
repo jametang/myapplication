@@ -46,10 +46,8 @@ public class MainActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        Toolbar toolbar = findViewById(R.id.toolbar);
         mDecorView = getWindow().getDecorView();
         setDimMode(this);
-//        setSupportActionBar(toolbar);
         initView();
         initData();
     }
@@ -85,16 +83,6 @@ public class MainActivity extends AppCompatActivity{
                 startActivity(intent);
             }
         });
-        Log.e("TANGLI","start");
-//        FragmentManager fragmentManager = getSupportFragmentManager();
-//        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//        fragmentTransaction.replace(R.id.main_activity_content_ly,new MyFragment());
-//        fragmentTransaction.addToBackStack(null);
-//        fragmentTransaction.commit();
-
-
-//            Toolbar toolbar = findViewById(R.id.toolbar);
-//            setSupportActionBar(toolbar);
     }
 
     private void initData() {
@@ -135,79 +123,12 @@ public class MainActivity extends AppCompatActivity{
         button.startAnimation(animationZoomIn);
     }
 
-    class Data{
-
-        public Data(String name){
-            this.name = name;
-        }
-        String name;
-
-        @Override
-        public String toString() {
-            return name;
-        }
-    }
 
     @Override
     protected void onResume() {
         super.onResume();
-//        hideStatusBar();
-    }
-
-    private void hideStatusBar() {
-        View decorView = getWindow().getDecorView();
-        decorView.setSystemUiVisibility(
-                View.SYSTEM_UI_FLAG_FULLSCREEN
-                | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                | View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                |View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-        );
     }
 
 
 
-    //    @Override
-//    protected void onStart() {
-//        super.onStart();
-//        Intent service = new Intent(this,RemindService.class);
-//        mIsBind  = bindService(service,connection, Context.BIND_AUTO_CREATE);
-//    }
-//
-//    @Override
-//    public void refreshUI(final int num) {
-//        runOnUiThread(new Runnable() {
-//            @Override
-//            public void run() {
-//                if(mTextView != null){
-//                    mTextView.setText(num + "");
-//                }
-//                if(mImageView != null){
-//                    mImageView.setBackgroundColor(getCumstomColor());
-//                }
-//            }
-//        });
-//    }
-//
-//    private ServiceConnection connection = new ServiceConnection() {
-//        @Override
-//        public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
-//            mService = ((RemindService.MyBinder)iBinder).getService();
-//            mService.setMyInterface(MainActivity.this);
-//            MainActivity.this.mIsConnected = true;
-//            if(mService != null){
-//                mService.startTask();
-//            }
-//        }
-//
-//        @Override
-//        public void onServiceDisconnected(ComponentName componentName) {
-//            MainActivity.this.mIsConnected = false;
-//        }
-//    };
-//
-//    public int getCumstomColor() {
-//        return Color.rgb(random.nextInt(), random.nextInt(), random.nextInt());
-//    }
 }
