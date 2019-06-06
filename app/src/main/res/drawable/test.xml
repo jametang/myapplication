@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--选中状态-->
+    <item android:state_pressed="true" android:state_enabled="true">
+        <shape>
+            <!-- 内部颜色 -->
+            <solid
+                android:color="#0E0D0A"/>
+            <!-- 圆角的幅度 -->
+            <corners
+                android:topLeftRadius="12.5dip"
+                android:bottomLeftRadius="12.5dip"
+                android:topRightRadius="0dip"
+                android:bottomRightRadius="0dip"/>
+        </shape>
+    </item>
+    <!--正常状态-->
+    <item>
+        <shape>
+            <!-- 内部颜色 -->
+            <solid
+                android:color="#45ffffff"/>
+            <!-- 圆角的幅度 -->
+            <corners
+                android:topLeftRadius="12.5dip"
+                android:bottomLeftRadius="12.5dip"
+                android:topRightRadius="0dip"
+                android:bottomRightRadius="0dip"/>
+        </shape>
+    </item>
+</selector>
